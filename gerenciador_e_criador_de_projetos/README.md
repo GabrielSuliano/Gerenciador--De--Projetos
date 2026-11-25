@@ -5,7 +5,7 @@ Projeto web em **PHP puro + MySQL + JavaScript**, com duas frentes principais:
 1. **CRM de Contatos** (cadastro, busca, edição, favoritar e exclusão).
 2. **Portfolio OS** (catálogo de projetos, criação de cases e captura de leads).
 
-O front-end principal roda em `index.php` (Portfolio OS), com uma cópia em `meuindex.html`; o backend expõe APIs em `api/`.
+O front-end principal roda em `index.php` (Portfolio OS); o backend expõe APIs em `api/`. A cópia `meuindex.html` mencionada em versões anteriores não está versionada.
 
 ---
 
@@ -66,7 +66,7 @@ O backend de contatos continua disponível em `api/contacts.php` e na tabela `co
 ├── database.sql          # Script SQL de criação de schema/tabelas + seed
 ├── index.php             # Frontend Portfolio OS (principal)
 ├── instalar_banco.php    # Instalador automático do banco/tabelas
-└── meuindex.html         # Cópia HTML do Portfolio OS
+└── assets/               # CSS e JavaScript da interface
 ```
 
 ---
@@ -294,7 +294,7 @@ Além disso:
 
 1. Configure o banco (ideal: `instalar_banco.php`).
 2. Abra `index.php` para usar o Portfolio OS.
-3. (Opcional) Abra `meuindex.html` como cópia equivalente do portfólio.
+3. Use o frontend `index.php`; não há cópia HTML versionada.
 4. Use as rotas em `api/` para integrar com outros frontends.
 
 ---
@@ -318,4 +318,4 @@ Além disso:
 
 ---
 
-Se quiser, posso também gerar uma versão **README curto (MVP)** para apresentação no GitHub com menos detalhes técnicos.
+Consulte o [README da raiz](../README.md) para estado, limitações de autenticação e configuração por ambiente. O [resumo da API e dados](../docs/API.md) complementa os contratos acima. Não há loader automático de `.env`; instalador e SQL devem ser utilizados somente em banco local isolado.
